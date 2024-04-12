@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div>input{
+        margin-top: 10px;
+        padding: auto;
+    }
+
+    div>button{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div> <input type="text" placeholder="enter 1st Number" id="num1">
+          <input type="text" placeholder="enter 2st Number" id="num2">
+    </div>
+
+    <div>
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    </div>
+    
+</body>
+<script>
+
+function add() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        alert("Result: " + (num1 + num2));
+    }
+
+    function subtract() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        alert("Result: " + (num1 - num2));
+    }
+
+    function divide() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        if (num2 === 0) {
+            alert("Error: Cannot divide by zero");
+        } else {
+            alert("Result: " + (num1 / num2));
+        }
+    }
+
+    function multiply() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        alert("Result: " + (num1 * num2));
+    }
+
+</script>
+</html>

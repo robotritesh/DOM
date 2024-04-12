@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #containar{
+            margin-left: 10%;
+            display: flex;
+            gap: 20px;
+        }
+
+        #containar>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #containar>div>img{
+            margin-top: 5px;
+        }
+        h3{
+            margin-top: 5px;
+        }
+        p{
+            margin-top: -8px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    
+    <div id="parent"> </div>
+    <div id="containar"></div>
+
+</body>
+<script>
+let velue = document.querySelector("#parent")
+
+let h1Ele = document.createElement("h1")
+h1Ele.innerHTML = "Strategic Investors"
+h1Ele.style.textAlign = "center"
+
+velue.append(h1Ele)
+
+let obj = [
+    {
+        img1 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name : "Vijay Shekhar Sharma",
+        post : "Founder & CEO",
+        img2 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
+    },
+    {
+        img1 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+        name : "Kunal Shah",
+        post : "Founder",
+        img2 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
+    },
+    {
+        img1 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+        name : "Amrish Rau",
+        post : "CEO",
+        img2 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
+    },
+    {
+        img1 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+        name : "Sampad Swain",
+        post : "Co-Founder & CEO",
+        img2 : "https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
+    }
+]
+
+let containar = document.querySelector("#containar")
+// containar.style.display = "flex"
+// containar.style.gap = "20px"
+obj.forEach(function(ele,i){
+
+    let separateDiv = document.createElement("div")
+
+    let img1 = document.createElement("img")
+    img1.src = ele.img1
+//containar.append(img1)
+
+let name = document.createElement("h3")
+name.innerHTML = ele.name
+//containar.append(name)
+
+let post = document.createElement("p")
+post.innerHTML = ele.post
+//containar.append(post)
+
+
+let img2 = document.createElement("img")
+img2.src = ele.img2
+separateDiv.append(img1,name,post,img2)
+containar.append(separateDiv)
+img2.style.height = "45px"
+})
+</script>
+</html>
